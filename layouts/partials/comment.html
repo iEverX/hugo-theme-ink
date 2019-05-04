@@ -1,0 +1,18 @@
+{{ if .Site.Params.utteranc.enabled -}}
+    {{ with .Site.Params.utteranc }}
+    <script src="https://utteranc.es/client.js"
+            repo="{{ .repo }}"
+            issue-term="{{ .issueTerm | default "pathname" }}"
+            {{ if isset . "label" -}}
+                label="{{ .label }}"
+            {{ end }}
+            theme="{{ .theme | default "github-light" }}"
+            crossorigin="anonymous"
+            async>
+    </script>
+    {{ end }}
+{{ end }}
+{{ if .Site.DisqusShortname -}}
+    <h2 style="color: #777">评论</h2>
+    {{ template "_internal/disqus.html" . }}
+{{ end }}

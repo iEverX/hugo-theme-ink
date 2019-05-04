@@ -1,0 +1,17 @@
+<div class="nav-container">
+    <div class="nav">
+        {{ $github := .github }}
+        {{ range .nav }}
+            {{ if and .github $github -}}
+                <div class="u-link nav-item">
+                    <a href="{{ printf "https://github.com/%s" $github }}">{{ .name }}</a>
+                </div>
+            {{ else }}
+                <div class="u-link nav-item">
+                    <a href="{{ .url | relURL }}">{{ .name }}</a>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="clearfix"></div>
+</div>

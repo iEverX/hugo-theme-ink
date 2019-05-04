@@ -2,3 +2,15 @@
     # see https://gohugo.io/functions/format/
     dateFormat = "2006.01.02"
     github = ""
+
+[[params.nav]]
+name = "home"
+url = "/"
+
+[[params.nav]]
+name = "tags"
+url = "/tags"
+
+[[params.nav]]
+name = "github"
+github = true
