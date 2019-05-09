@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="block-single">
+    {{ .Content }}
+</div>
+
+<ul>
+{{ range .Params.links -}}
+    <li style="list-style:none;">
+        <a href="{{ .url }}" title="{{ .title | default .name }}">{{ .name }}</a>
+    </li>
+{{ end }}
+</ul>
+
+{{ end }}

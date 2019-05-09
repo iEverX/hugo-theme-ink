@@ -3,6 +3,8 @@
     {{ .Content }}
 </div>
 
-{{ partial "comment.html" . }}
+{{ if .Params.enable_comment -}}
+    {{ partial "comment.html" . }}
+{{ end }}
 
 {{ end }}
