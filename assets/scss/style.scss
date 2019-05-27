@@ -11,10 +11,12 @@ body {
     color: #222;
     line-height: 2rem;
     overflow-x: hidden;
+    width: 100vw;
 }
 
 .container {
     margin: auto;
+    padding-left: calc(100vw - 100%);
 }
 
 .block-container {

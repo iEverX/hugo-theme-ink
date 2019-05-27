@@ -8,6 +8,8 @@
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ end }}
 
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+    {{ $style := resources.Get "scss/style.scss" | toCSS $options | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink | relURL }}">
     <link rel="stylesheet" href="{{ "css/code.github.css" | relURL }}">
 </head>
