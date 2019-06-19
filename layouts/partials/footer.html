@@ -1,8 +1,13 @@
 <div id="footer">
     <div class="footer-container">
+        <div class="copyright" >
+            <span> &copy;
+                {{ (index (where (where .Site.Pages.Reverse "Section" "post") "Type" "post") 0).Date.Format "2006" }} - {{ now.Year }}</span>
+            <span class="author">{{ .Site.Title }}</span>
+        </div>
         <div class="support">
-            <div class="powered-by">本站由 <a href="https://gohugo.io" target="_blank">Hugo v{{ hugo.Version }}</a> 驱动</div>
-            <div class="theme">采用 <a href="https://github.com/ieverx/ink" target="_blank">ink</a> 主题</div>
+            <span class="powered-by">本站由 <a href="https://gohugo.io" target="_blank">Hugo v{{ hugo.Version }}</a> 驱动</span>
+            <span class="theme">采用 <a href="https://github.com/ieverx/ink" target="_blank">ink</a> 主题</span>
         </div>
     </div>
 </div>
