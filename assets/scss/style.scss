@@ -192,13 +192,10 @@ blockquote {
         color: #333;
         padding: 0 3px;
         margin: 0 -3px;
-        border-bottom: 2px solid #aaa;
+        border-bottom: 1px solid #aaa;
         &:hover {
-            color: #111;
-            border-bottom: 2px solid #666;
-        }
-        &:visited {
-            color: rgb(7, 167, 153);
+            color: #000;
+            border-bottom: 1px solid #666;
         }
     }
 
